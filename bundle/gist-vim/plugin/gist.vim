@@ -680,6 +680,9 @@ function! Gist(line1, line2, ...)
     if strlen(g:github_token) == 0
       let g:github_token = $GITHUB_TOKEN
     end
+    if g:github_token =~ "^!"
+        let g:github_token = substitute(system(substitute(g:github_token, "^!", '', '')), "\n", '', '')
+    end
   endif
   if strlen(g:github_user) == 0 || strlen(g:github_token) == 0
     echohl ErrorMsg
