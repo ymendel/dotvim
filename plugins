@@ -17,6 +17,11 @@ let g:bufExplorerDetailedHelp=1     " show full help text by default
 " let g:bufExplorerShowRelativePath=1 " use relative paths
 let g:bufExplorerShowUnlisted=1     " display unlisted buffers
 
+""" gist
+let g:gist_clip_command = 'pbcopy'      " get the URL in my clipboard
+let g:gist_open_browser_after_post = 0  " don't open the gist in my browser
+let g:gist_show_privates = 1            " show private gists when listing
+
 """ NERDCommenter
 let NERDCreateDefaultMappings=0 " disable default mappings
 let NERDMenuMode=0              " disable menu
