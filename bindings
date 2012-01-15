@@ -35,6 +35,9 @@ map <leader>s :s/\s\+$//g<CR>
 " shortcut to delete blank lines
 map <leader>db :g/^\s*$/d<CR>
 
+" shortcut for titlecasing a line
+map <leader>T :s/\<\(\w\)\(\w*\)\>/\u\1\L\2/g<CR>
+
 " fold helpers:
 "   Tab: toggle fold state
 "   Shift-Tab: toggle state of outermost fold
