@@ -30,7 +30,8 @@ map <leader>] :bnext<CR>
 map <leader>r :w<CR>:make %<CR>
 
 " shortcut to strip trailing whitespace
-map <leader>s :s/\s\+$//g<CR>
+map <leader>s  :s/\s\+$//g<CR>
+map <leader>sa :%s/\s\+$//g<CR>  " on all lines
 
 " shortcut to delete blank lines
 map <leader>db :g/^\s*$/d<CR>
