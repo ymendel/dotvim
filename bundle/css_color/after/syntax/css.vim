@@ -20,6 +20,7 @@ function! s:FGForBG(color)
 endfunction
 
 function! s:MatchColorValue(color, pattern)
+  if ! len(a:color) | return | endif
   let group = 'cssColor' . tolower(a:color)
   let pattern = a:pattern
   if pattern =~ '\>$' | let pattern .= '\>' | endif
@@ -48,7 +49,7 @@ endfunction
 
 function! s:HexForHSLValue(h,s,l)
   " Convert 80% -> 0.8, 100% -> 1.0, etc.
-  let [s,l] = map( [a:s, a:l], 'v:val =~ "%$" ? v:val / 100.0 : v:val * 1.0' )
+  let [s,l] = map( [a:s, a:l], 'v:val =~ "%$" ? v:val / 100.0 : str2float(v:val)' )
   " algorithm transcoded to vim from http://www.w3.org/TR/css3-color/#hsl-color
   let hh = ( a:h % 360 ) / 360.0
   let m2 = l <= 0.5 ? l * ( s + 1 ) : l + s - l * s
@@ -61,6 +62,7 @@ function! s:HexForHSLValue(h,s,l)
           \ h * 2 < 1 ? m2 :
           \ h * 3 < 2 ? m1 + ( m2 - m1 ) * ( 2/3.0 - h ) * 6 :
           \ m1
+    if v > 1.0 | return '' | endif
     let rgb += [ float2nr( 255 * v ) ]
   endfor
   return printf( '%02x%02x%02x', rgb[0], rgb[1], rgb[2] )
@@ -76,8 +78,14 @@ function! s:PreviewCSSColorInLine()
   call substitute( substitute( substitute( substitute( getline('.'),
     \ '#\(\x\)\(\x\)\(\x\)\>', '\=s:MatchColorValue(submatch(1).submatch(1).submatch(2).submatch(2).submatch(3).submatch(3), submatch(0))', 'g' ),
     \ '#\(\x\{6}\)\>', '\=s:MatchColorValue(submatch(1), submatch(0))', 'g' ),
-    \ 'rgba\?(\(\d\{1,3}\s*%\?\)\s*,\s*\(\d\{1,3}\s*%\?\)\s*,\s*\(\d\{1,3}\s*%\?\)\s*\%(,[^)]*\)\?)', '\=s:MatchColorValue(s:HexForRGBValue(submatch(1),submatch(2),submatch(3)),submatch(0))', 'g' ),
-    \ 'hsla\?(\(\d\{1,3}\s*%\?\)\s*,\s*\(\d\{1,3}\s*%\?\)\s*,\s*\(\d\{1,3}\s*%\?\)\s*\%(,[^)]*\)\?)', '\=s:MatchColorValue(s:HexForHSLValue(submatch(1),submatch(2),submatch(3)),submatch(0))', 'g' )
+    \ 'rgba\?(\s*\(\d\{1,3}%\?\)\s*,\s*\(\d\{1,3}%\?\)\s*,\s*\(\d\{1,3}%\?\)\s*\%(,[^)]*\)\?)', '\=s:MatchColorValue(s:HexForRGBValue(submatch(1),submatch(2),submatch(3)),submatch(0))', 'g' ),
+    \ 'hsla\?(\s*\(\d\{1,3}%\?\)\s*,\s*\(\d\{1,3}%\?\)\s*,\s*\(\d\{1,3}%\?\)\s*\%(,[^)]*\)\?)', '\=s:MatchColorValue(s:HexForHSLValue(submatch(1),submatch(2),submatch(3)),submatch(0))', 'g' )
+endfunction
+
+function! s:PreviewCSSColorInBuffer()
+  let view = winsaveview()
+  %call s:PreviewCSSColorInLine()
+  call winrestview(view)
 endfunction
 
 if has("gui_running") || &t_Co==256
@@ -330,14 +338,11 @@ if has("gui_running") || &t_Co==256
   call s:MatchColorName('F5F5F5', 'WhiteSmoke')
   call s:MatchColorName('9ACD32', 'YellowGreen')
 
-  let view = winsaveview()
-  %call s:PreviewCSSColorInLine()
-  call winrestview(view)
-
   " fix highlighting of "white" in `white-space` etc
   " this really belongs in Vim's own syntax/css.vim ...
   setlocal iskeyword+=-
 
+  autocmd BufEnter     * silent call s:PreviewCSSColorInBuffer()
   autocmd CursorMoved  * silent call s:PreviewCSSColorInLine()
   autocmd CursorMovedI * silent call s:PreviewCSSColorInLine()
 endif

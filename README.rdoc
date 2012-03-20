@@ -13,7 +13,7 @@ Pretty straightforward.  Clone and symlink:
 
 Optionally, you may want to update the bundles:
 
-  $ cd ~/.vim && rake update:bundles
+  $ cd ~/.vim && rake update
 
 == What's Inside?!
 
@@ -22,6 +22,8 @@ Optionally, you may want to update the bundles:
 * The {deveiate}[http://www.vim.org/scripts/script.php?script_id=2277] color scheme
 * The {ir_black}[http://blog.infinitered.com/entries/show/8] color scheme
 * The {solarized}[http://ethanschoonover.com/solarized] color scheme
+* The {xoria256}[http://www.vim.org/scripts/script.php?script_id=2140] color scheme
+* The {Tomorrow Night}[https://github.com/ChrisKempson/Vim-Tomorrow-Theme] color scheme
 
 Also, some plugins:
 
@@ -45,6 +47,7 @@ Aaaaaalso, some syntax definitions:
 * {JSON}[http://www.vim.org/scripts/script.php?script_id=1945]
 * {Markdown}[http://github.com/ujihisa/vim-markdown]
 * {nginx}[http://www.vim.org/scripts/script.php?script_id=1886]
+* {Processing}[https://github.com/sophacles/vim-processing]
 * {RDoc}[http://www.vim.org/scripts/script.php?script_id=2878]
 * {Scala}[https://github.com/derekwyatt/vim-scala]
 * {Slidedown}[http://www.vim.org/scripts/script.php?script_id=3069]
