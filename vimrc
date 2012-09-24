@@ -1,22 +1,4 @@
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"""
-""" Ben Bleything's Vim Setup
-""" Based on the work of many others. See README.rdoc for credits.
-"""
-""" Git Hubs: http://github.com/bleything/dotvim
-""" Internet Electronic Mail: ben@bleything.net
-"""
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"""
-""" To install, make this directory live at ~/.vim and then make the
-""" vimrc file live at ~/.vimrc.  You may also want to run:
-"""
-"""   $ cd ~/.vim && rake update
-"""
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-" load up everything in ~/.vim/bundle using pathogen.vim
-call pathogen#runtime_append_all_bundles()
+source $HOME/.vim/vundle
 
 source $HOME/.vim/basic
 source $HOME/.vim/bindings
