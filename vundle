@@ -13,10 +13,15 @@ Bundle 'gmarik/vundle'
 Bundle 'scrooloose/nerdtree'
 Bundle 'mileszs/ack.vim'
 
+" File Specific
+Bundle 'tpope/vim-markdown'
+Bundle 'puppetlabs/puppet-syntax-vim'
+
 " Editing
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'tpope/vim-surround'
 
+" Other
 Bundle 'tpope/vim-fugitive'
 
 
