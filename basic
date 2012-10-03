@@ -1,14 +1,4 @@
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"""
-""" Ben Bleything's Vim Setup
-""" Based on the work of many others. See README.rdoc for credits.
-"""
-""" Git Hubs: http://github.com/bleything/dotvim
-""" Internet Electronic Mail: ben@bleything.net
-"""
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 """ B A S I C   O P T I O N S
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set nocompatible " to hell with vi compatibility!
