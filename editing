@@ -1,14 +1,4 @@
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"""
-""" Ben Bleything's Vim Setup
-""" Based on the work of many others. See README.rdoc for credits.
-"""
-""" Git Hubs: http://github.com/bleything/dotvim
-""" Internet Electronic Mail: ben@bleything.net
-"""
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 """ E D I T I N G   O P T I O N S
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 syntax on       " turn on syntax highlighting
@@ -26,7 +16,7 @@ set backspace=indent,eol,start
 "set smartindent " automatically indent new lines
 
 " for most code, use 4 space indents. specific filetypes are overridden
-" in filetypes.vimrc
+" in filetypes
 set softtabstop=4 " most of the time, we want a softtabstop of 4
 set tabstop=4     " display tabs as 4 characters wide
 set shiftwidth=4  " shift by 4 spaces when using >> and <<, etc
