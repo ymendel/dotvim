@@ -12,6 +12,7 @@ Bundle 'gmarik/vundle'
 " File Navigation
 Bundle 'scrooloose/nerdtree'
 Bundle 'mileszs/ack.vim'
+Bundle 'kien/ctrlp.vim'
 
 " File Specific
 Bundle 'tpope/vim-markdown'
