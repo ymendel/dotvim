@@ -19,9 +19,3 @@ map <leader>d :NERDTreeToggle<cr>
 map <leader>ack :Ack 
 map <leader>an :cn<cr>
 map <leader>ap :cp<cr>
-
-""" ctrlp
-" from technoweenie, for dotcom
-" let g:ctrlp_map = '<c-t>'
-" let g:ctrlp_dotfiles = 0
-" set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*.so,test/fixtures/git/*,*/vendor/gems/*,*/.bundle/*,*/.sass-cache/*,*/repositories/development/*,*/.DS_Store,*/tmp/*,*/vendor/cache/*
