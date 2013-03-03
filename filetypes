@@ -5,7 +5,7 @@
 filetype plugin indent on
 
 " ruby and yaml files are indented by two
-autocmd FileType ruby,yaml set softtabstop=2 tabstop=2 shiftwidth=2
+autocmd FileType ruby,eruby,yaml set softtabstop=2 tabstop=2 shiftwidth=2
 
 " Gemfile, Isolate, and config.ru are ruby
 autocmd BufNewFile,BufRead Gemfile     setfiletype ruby
