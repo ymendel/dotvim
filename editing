@@ -34,7 +34,7 @@ set listchars+=precedes:«    " show a « when a line goes off the left
                              " edge of the screen
 function! NumberToggle()
  if(&relativenumber == 1)
-    set number
+    set norelativenumber
   else
     set relativenumber
   endif
