@@ -13,6 +13,7 @@ Plugin 'VundleVim/Vundle.vim'
 
 " File Navigation
 Plugin 'scrooloose/nerdtree'
+Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'mileszs/ack.vim'
 Plugin 'kien/ctrlp.vim'
 
