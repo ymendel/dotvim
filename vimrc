@@ -1,4 +1,4 @@
-source $HOME/.vim/vundle
+source $HOME/.vim/pluginit
 
 source $HOME/.vim/basic
 source $HOME/.vim/bindings

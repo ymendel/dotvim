@@ -8,8 +8,7 @@ Clone and go
 
     $ git clone https://github.com/ymendel/dotvim.git ~/.vim
     $ ln -s ~/.vim/vimrc ~/.vimrc
-    $ cd ~/.vim && git submodule update --init
-    $ vim +PluginInstall +qall
+    $ vim +PlugInstall +qall
 
 ## Appreciation
 

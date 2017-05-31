@@ -1,0 +1,19 @@
+call plug#begin('~/.vim/plugged')
+
+" File Navigation
+Plug 'scrooloose/nerdtree'
+Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'mileszs/ack.vim'
+Plug 'ctrlpvim/ctrlp.vim'
+
+" File Specific
+Plug 'tpope/vim-markdown'
+
+" Editing
+Plug 'scrooloose/nerdcommenter'
+Plug 'tpope/vim-surround'
+
+" Other
+Plug 'tpope/vim-fugitive'
+
+call plug#end()

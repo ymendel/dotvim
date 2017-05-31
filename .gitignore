@@ -1,3 +1,5 @@
 swapfiles/*
 undofiles/*
 .netrwhist
+
+plugged/*
