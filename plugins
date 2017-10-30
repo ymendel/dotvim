@@ -19,3 +19,9 @@ map <leader>d :NERDTreeToggle<cr>
 map <leader>ack :Ack 
 map <leader>an :cn<cr>
 map <leader>ap :cp<cr>
+
+
+""" ctrlp-funky
+nnoremap <Leader>fu :CtrlPFunky<Cr>
+nnoremap <Leader>fU :execute 'CtrlPFunky ' . expand('<cword>')<Cr>
+let g:ctrlp_funky_matchtype = 'path'
