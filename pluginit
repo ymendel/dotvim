@@ -21,5 +21,6 @@ Plug 'nathanaelkane/vim-indent-guides'
 " Other
 Plug 'mtth/scratch.vim'
 Plug 'tpope/vim-fugitive'
+Plug 'airblade/vim-gitgutter'
 
 call plug#end()
