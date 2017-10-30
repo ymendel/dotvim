@@ -21,7 +21,11 @@ map <leader>an :cn<cr>
 map <leader>ap :cp<cr>
 
 
-""" ctrlp-funky
-nnoremap <Leader>fu :CtrlPFunky<Cr>
-nnoremap <Leader>fU :execute 'CtrlPFunky ' . expand('<cword>')<Cr>
+""" ctrlp and -funky
+nnoremap <leader>t :CtrlPTag<cr>
+nnoremap <leader>fu :CtrlPFunky<cr>
+nnoremap <leader>fU :execute 'CtrlPFunky ' . expand('<cword>')<cr>
 let g:ctrlp_funky_matchtype = 'path'
+
+""" tagbar
+nnoremap <silent> <leader>b :TagbarToggle<cr>
