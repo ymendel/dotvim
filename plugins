@@ -15,12 +15,6 @@ map <leader>cu <plug>NERDCommenterUncomment
 """ NERDTree
 map <leader>d :NERDTreeToggle<cr>
 
-""" ack
-map <leader>ack :Ack 
-map <leader>an :cn<cr>
-map <leader>ap :cp<cr>
-
-
 """ ctrlp and -funky
 nnoremap <leader>t :CtrlPTag<cr>
 nnoremap <leader>fu :CtrlPFunky<cr>
