@@ -1,12 +1,12 @@
 call plug#begin('~/.vim/plugged')
 
 " File Navigation
-Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'mileszs/ack.vim'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'tacahiroy/ctrlp-funky'
-Plug 'majutsushi/tagbar'
+Plug 'majutsushi/tagbar', { 'on': 'TagbarToggle' }
 
 " File Specific
 Plug 'tpope/vim-markdown'
