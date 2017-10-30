@@ -15,6 +15,7 @@ Plug 'scrooloose/nerdcommenter'
 Plug 'tpope/vim-surround'
 
 " Looks
+Plug 'itchyny/lightline.vim'
 Plug 'nathanaelkane/vim-indent-guides'
 
 " Other
