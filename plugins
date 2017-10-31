@@ -11,6 +11,7 @@ let NERDDefaultNesting=0        " don't recomment commented lines
 map <leader>cc <plug>NERDCommenterToggle
 map <leader>cC <plug>NERDCommenterSexy
 map <leader>cu <plug>NERDCommenterUncomment
+map <leader>ca <plug>NERDCommenterAppend
 
 """ NERDTree
 map <leader>d :NERDTreeToggle<cr>
