@@ -6,6 +6,7 @@ Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'tacahiroy/ctrlp-funky'
 Plug 'majutsushi/tagbar', { 'on': 'TagbarToggle' }
+Plug 'jeetsukumaran/vim-buffergator'
 
 " File Specific
 Plug 'tpope/vim-markdown'
