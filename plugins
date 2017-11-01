@@ -17,10 +17,14 @@ map <leader>ca <plug>NERDCommenterAppend
 map <leader>d :NERDTreeToggle<cr>
 
 """ ctrlp and -funky
-nnoremap <leader>t :CtrlPTag<cr>
-nnoremap <leader>fu :CtrlPFunky<cr>
-nnoremap <leader>fU :execute 'CtrlPFunky ' . expand('<cword>')<cr>
+nnoremap <leader>pm :CtrlPMixed<cr>
+nnoremap <leader>pt :CtrlPTag<cr>
+nnoremap <leader>pf :CtrlPFunky<cr>
+nnoremap <leader>pF :execute 'CtrlPFunky ' . expand('<cword>')<cr>
 let g:ctrlp_funky_matchtype = 'path'
 
+""" buffergator
+nnoremap <leader>b :BuffergatorToggle<cr>
+
 """ tagbar
-nnoremap <silent> <leader>b :TagbarToggle<cr>
+nnoremap <silent> <leader>tb :TagbarToggle<cr>
