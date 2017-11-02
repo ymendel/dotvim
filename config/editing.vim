@@ -7,7 +7,6 @@ set showbreak=+ " display a + at the beginning of a wrapped line
 set showmatch   " flash the matching bracket on inserting a )]} etc
 
 set hidden      " let buffers be hidden, instead of needing to be closed
-set noshowmode  " lightline handles this fine
 
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start
