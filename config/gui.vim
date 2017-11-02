@@ -3,7 +3,6 @@ if has("gui_running")
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 """ G U I   O P T I O N S
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-colorscheme Tomorrow-Night-tweaked  " use a nice 256-color scheme in the gui
 set mouse=a                 " use mouse when possible
 set guifont=Inconsolata:h16 " Inconsolata, 16pt high
 

@@ -17,9 +17,3 @@ let g:lightline = {
       \   'gitbranch': 'fugitive#head'
       \ },
       \ }
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-""" C O L O R   O P T I O N S
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-set background=dark " use colors suitable for dark backgrounds
-colorscheme drbrain
