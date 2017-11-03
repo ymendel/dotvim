@@ -34,14 +34,7 @@ set listchars+=extends:»     " show a » when a line goes off the right
                              " edge of the screen
 set listchars+=precedes:«    " show a « when a line goes off the left
                              " edge of the screen
-function! NumberToggle()
- if(&relativenumber == 1)
-    set norelativenumber
-  else
-    set relativenumber
-  endif
-endfunc
-nnoremap <C-n> :call NumberToggle()<cr>
+nnoremap <silent> <C-n> :set relativenumber!<cr>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 """ F O L D I N G   O P T I O N S
