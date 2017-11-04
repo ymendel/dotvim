@@ -3,10 +3,10 @@
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 """ NERDTree
-map <leader>d :NERDTreeToggle<cr>
+nnoremap <leader>d :NERDTreeToggle<cr>
 
 """ buffergator
 nnoremap <leader>b :BuffergatorToggle<cr>
 
 """ tagbar
-nnoremap <silent> <leader>tb :TagbarToggle<cr>
+nnoremap <leader>tb :TagbarToggle<cr>
