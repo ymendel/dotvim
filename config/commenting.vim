@@ -7,4 +7,4 @@ let NERDDefaultNesting = 0         " don't recomment commented lines
 map <leader>cc <plug>NERDCommenterToggle
 map <leader>cC <plug>NERDCommenterSexy
 map <leader>cu <plug>NERDCommenterUncomment
-map <leader>ca <plug>NERDCommenterAppend
+map <leader>ca $a <esc><plug>NERDCommenterAppend
