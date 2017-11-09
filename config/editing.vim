@@ -43,11 +43,3 @@ set listchars+=extends:»     " show a » when a line goes off the right
                              " edge of the screen
 set listchars+=precedes:«    " show a « when a line goes off the left
                              " edge of the screen
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-""" S E A R C H   O P T I O N S
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-set ignorecase " makes search patterns case-insensitive by default
-set smartcase  " overrides ignorecase when the pattern contains
-               " upper-case characters
-set incsearch  " incremental search. 'nuf said
