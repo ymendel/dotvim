@@ -4,7 +4,7 @@ nnoremap <silent> <c-n> :set relativenumber!<cr>
 augroup curline_highlight
     autocmd!
     " highlight the current line in current window
-    autocmd WinEnter * setlocal cursorline
+    autocmd WinEnter,BufEnter * setlocal cursorline
     autocmd WinLeave * setlocal nocursorline
 augroup END
 
