@@ -1,12 +1,14 @@
 set number  " show line numbers
 nnoremap <silent> <c-n> :set relativenumber!<cr>
 
+if has("gui_running")
 augroup curline_highlight
     autocmd!
     " highlight the current line in current window
     autocmd WinEnter,BufEnter * setlocal cursorline
     autocmd WinLeave * setlocal nocursorline
 augroup END
+endif
 
 " Stop annoying me every time I have a file open in two different vim sessions.
 " 'e' is 'Edit Anyway' in this circumstance. Other options you could use here:
