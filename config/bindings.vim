@@ -9,7 +9,7 @@ map <leader>] :bnext<CR>
 
 " shortcut to strip trailing whitespace
 map <leader>s  :s/\s\+$//g<CR>
-map <leader>sa :%s/\s\+$//g<CR>  " on all lines
+map <leader>sa :%s/\s\+$//g<CR>
 
 " shortcut to delete blank lines
 map <leader>db :g/^\s*$/d<CR>
