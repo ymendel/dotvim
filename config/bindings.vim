@@ -1,6 +1,3 @@
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-""" K E Y   B I N D I N G S
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let mapleader=',' " set leader to ,
 
 " quick buffer switching
@@ -16,11 +13,3 @@ map <leader>db :g/^\s*$/d<CR>
 
 " shortcut for titlecasing a line
 map <leader>T :s/\<\(\w\)\(\w*\)\>/\u\1\L\2/g<CR>
-
-" fold helpers:
-"   Tab: toggle fold state
-"   Shift-Tab: toggle state of outermost fold
-"   Ctrl-Tab: open all folds
-map <TAB> za
-map <S-TAB> zA
-map <C-TAB> zR
