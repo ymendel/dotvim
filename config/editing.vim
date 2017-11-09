@@ -10,16 +10,6 @@ augroup curline_highlight
 augroup END
 endif
 
-" Stop annoying me every time I have a file open in two different vim sessions.
-" 'e' is 'Edit Anyway' in this circumstance. Other options you could use here:
-" 'q' - quit.
-" 'o' - open the file in read-only mode.
-" 'r' - recover the changes.
-augroup simuledit
-   autocmd!
-   autocmd SwapExists * :let v:swapchoice = 'e'
-augroup END
-
 syntax on       " turn on syntax highlighting
 
 set showbreak=+ " display a + at the beginning of a wrapped line
@@ -61,14 +51,3 @@ set ignorecase " makes search patterns case-insensitive by default
 set smartcase  " overrides ignorecase when the pattern contains
                " upper-case characters
 set incsearch  " incremental search. 'nuf said
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-""" S W A P   A N D   U N D O   O P T I O N S
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-set directory=~/.vim/swapfiles,/var/tmp,/tmp,.
-
-" enable persistent undo
-if has("persistent_undo")
-    set undofile
-    set undodir=~/.vim/undofiles,/var/tmp,/tmp,.
-endif
