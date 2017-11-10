@@ -1,3 +1,5 @@
+syntax on  " syntax highlighting
+
 " use filetype plugins to determine indent settings
 filetype plugin indent on
 
