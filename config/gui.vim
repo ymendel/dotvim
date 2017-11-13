@@ -1,7 +1,7 @@
 if has("gui_running")
 
-set mouse=a                  " use mouse when possible
-set guifont=Inconsolata:h16  " Inconsolata, 16pt high
+set mouse=a  " use mouse when possible
+set guifont=Menlo:h13
 
 " set default window size
 set columns=170
