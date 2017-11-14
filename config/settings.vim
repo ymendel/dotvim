@@ -2,6 +2,7 @@ set nocompatible  " to hell with vi compatibility!
 set wildmenu      " fancy command completion menu!
 set modelines=1   " enable modelines
 
+" cpoptions ---------------------- {{{
 " Miscellaneous Options. Values:
 "   a: ":read" sets window filename
 "   A: ":write" sets window filename
@@ -13,6 +14,7 @@ set modelines=1   " enable modelines
 "   W: refuse to overwrite a readonly file, even with :w!
 "   Z: don't reset 'readonly' when using :w!
 set cpoptions=aABceFsWZ
+" }}}
 
 set showcmd  " shows incomplete command to the left of the ruler
 set hidden  " let buffers be hidden, instead of needing to be closed
