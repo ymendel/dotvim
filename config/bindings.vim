@@ -7,8 +7,8 @@ inoremap <d-cr> <esc>
 inoremap jk     <esc>
 
 " quick buffer switching
-noremap <leader>[ :bprevious<CR>
-noremap <leader>] :bnext<CR>
+nnoremap <silent> <leader>[ :bprevious<cr>
+nnoremap <silent> <leader>] :bnext<cr>
 
 " shortcut to strip trailing whitespace
 noremap <leader>s  :s/\s\+$//g<CR>
