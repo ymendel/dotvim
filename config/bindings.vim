@@ -1,4 +1,4 @@
-let mapleader=',' " set leader to ,
+let mapleader=','
 
 " quick buffer switching
 noremap <leader>[ :bprevious<CR>
