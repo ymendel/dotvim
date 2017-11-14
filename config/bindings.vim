@@ -1,5 +1,11 @@
 let mapleader=','
 
+" quick/easy ways to get out of insert mode
+" shift-Enter, cmd-Enter, jk
+inoremap <s-cr> <esc>
+inoremap <d-cr> <esc>
+inoremap jk     <esc>
+
 " quick buffer switching
 noremap <leader>[ :bprevious<CR>
 noremap <leader>] :bnext<CR>
