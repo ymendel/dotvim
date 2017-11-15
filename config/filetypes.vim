@@ -30,10 +30,10 @@ augroup END
 " }}}
 
 " configs auto-set filetype ---------------------- {{{
-" FIXME doesn't seem to work, probably something with the pattern
 augroup filetype_configs
     autocmd!
     " set filetype on config files for vim and bash
+    autocmd BufNewFile,BufRead ~/dev/projects/mine/dotvim/* setfiletype vim
     autocmd BufNewFile,BufRead ~/.vim/*  setfiletype vim
     autocmd BufNewFile,BufRead ~/.bash/* setfiletype sh
 augroup END
