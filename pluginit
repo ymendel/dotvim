@@ -2,7 +2,6 @@ call plug#begin('~/.vim/plugged')
 
 " file navigation ---------------------- {{{
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
-Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'tacahiroy/ctrlp-funky'
 Plug 'majutsushi/tagbar', { 'on': 'TagbarToggle' }
@@ -18,6 +17,12 @@ Plug 'scrooloose/nerdcommenter'
 Plug 'tpope/vim-surround'
 " }}}
 
+" version control ---------------------- {{{
+Plug 'tpope/vim-fugitive'
+Plug 'airblade/vim-gitgutter'
+Plug 'Xuyuanp/nerdtree-git-plugin'
+" }}}
+
 " looks ---------------------- {{{
 Plug 'itchyny/lightline.vim'
 Plug 'nathanaelkane/vim-indent-guides'
@@ -25,8 +30,6 @@ Plug 'nathanaelkane/vim-indent-guides'
 
 " other ---------------------- {{{
 Plug 'mtth/scratch.vim'
-Plug 'tpope/vim-fugitive'
-Plug 'airblade/vim-gitgutter'
 " }}}
 
 call plug#end()
