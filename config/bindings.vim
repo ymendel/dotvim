@@ -17,8 +17,11 @@ noremap <leader>sa :%s/\s\+$//g<CR>
 " shortcut to delete blank lines
 noremap <leader>db :g/^\s*$/d<CR>
 
-" shortcut for titlecasing a line
-noremap <leader>T :s/\<\(\w\)\(\w*\)\>/\u\1\L\2/g<CR>
+" titlecase a line (though currently not with rules like leaving 'a' alone)
+nnoremap <leader>T :s/\<\(\w\)\(\w*\)\>/\u\1\L\2/g<cr>
+" uppercase current word (not sure what's going on with <c-u> not working, but I'm okay with <c-U> for now)
+inoremap <c-U> <esc>viwUviw<esc>a
+nnoremap <c-U> viwUviw<esc>
 
 " for quick extra config changes, while I'm in the middle of stuff
 nnoremap <leader>ev :topleft :10split + $HOME/.vim/config/xtra.vim<cr>:setlocal nobuflisted<cr>
