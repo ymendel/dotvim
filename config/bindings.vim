@@ -1,5 +1,3 @@
-let mapleader=','
-
 " back to normal (mode) ---------------------- {{{
 " quick/easy ways to get out of insert mode
 " shift-Enter, cmd-Enter, jk
