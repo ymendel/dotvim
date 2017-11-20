@@ -7,7 +7,7 @@ set guifont=Menlo:h13
 set columns=170
 set lines=48
 
-" guioptions ---------------------- {{{
+" guioptions {{{
 " GUI option string.  Values:
 "   a: visual-mode selections go to the clipboard
 "   A: modeless selections go to the clipboard

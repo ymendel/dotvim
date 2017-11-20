@@ -3,13 +3,13 @@ syntax on  " syntax highlighting
 " use filetype plugins to determine indent settings
 filetype plugin indent on
 
-" ruby filetype special settings ---------------------- {{{
+" ruby filetype special settings {{{
 augroup filetype_ruby
     autocmd!
     " ruby and yaml files are indented by two
     autocmd FileType ruby,eruby,yaml setlocal softtabstop=2 tabstop=2 shiftwidth=2
 
-    " special files getting filetype set ---------------------- {{{
+    " special files getting filetype set {{{
     " Gemfile, Isolate, and config.ru are ruby
     autocmd BufNewFile,BufRead Gemfile   setfiletype ruby
     autocmd BufNewFile,BufRead Isolate   setfiletype ruby
@@ -21,7 +21,7 @@ augroup filetype_ruby
 augroup END
 " }}}
 
-" help filetype special settings ---------------------- {{{
+" help filetype special settings {{{
 augroup filetype_help
     autocmd!
     " don't show whitespace in help files
@@ -31,7 +31,7 @@ augroup filetype_help
 augroup END
 " }}}
 
-" configs auto-set filetype ---------------------- {{{
+" configs auto-set filetype {{{
 augroup filetype_configs
     autocmd!
     " set filetype on config files for vim and bash

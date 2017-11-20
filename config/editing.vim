@@ -1,8 +1,8 @@
-" line numbers and other current-line settings ---------------------- {{{
+" line numbers and other current-line settings {{{
 set number  " show line numbers
 nnoremap <silent> <c-n> :set relativenumber!<cr>
 
-" current-line highlighting ---------------------- {{{
+" current-line highlighting {{{
 if has("gui_running")
 augroup curline_highlight
     autocmd!
@@ -17,8 +17,8 @@ endif
 set showmatch  " flash the matching bracket on inserting a )]} etc
 set backspace=indent,eol,start  " allow backspacing over everything in insert mode
 
-" indentation settings ---------------------- {{{
-" FIXME autoindenting, no need to specify? ---------------------- {{{
+" indentation settings {{{
+" FIXME autoindenting, no need to specify? {{{
 """ FIXME: everything works as expected without these, I'm sure
 """        that I'm just missing something
 "set cindent    " c-style language indentation
@@ -26,7 +26,7 @@ set backspace=indent,eol,start  " allow backspacing over everything in insert mo
 "set smartindent " automatically indent new lines
 " }}}
 
-" four-space standard ---------------------- {{{
+" four-space standard {{{
 " for most code, use 4 space indents. specific filetypes are overridden elsewhere
 set softtabstop=4  " most of the time, we want a softtabstop of 4
 set tabstop=4      " display tabs as 4 characters wide
@@ -34,7 +34,7 @@ set shiftwidth=4   " shift by 4 spaces when using >> and <<
 set expandtab      " no tabs, just spaces
 " }}}
 
-" indentation re-set ---------------------- {{{
+" indentation re-set {{{
 " using autocmd for this allows it to be reset every time you open a
 " file, which keeps overrides from being persistent
 augroup reset_indenting
@@ -44,7 +44,7 @@ augroup END
 " }}}
 " }}}
 
-" whitespace, listchars, and other extra things being shown ---------------------- {{{
+" whitespace, listchars, and other extra things being shown {{{
 set list                     " show whitespace
 set listchars=tab:»·,trail:· " show tabs and trailing spaces
 set listchars+=extends:»     " show a » when a line goes off the right edge of the screen

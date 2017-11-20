@@ -1,4 +1,4 @@
-" back to normal (mode) ---------------------- {{{
+" back to normal (mode) {{{
 " quick/easy ways to get out of insert mode
 " shift-Enter, cmd-Enter, jk
 inoremap <s-cr> <esc>
@@ -6,13 +6,13 @@ inoremap <d-cr> <esc>
 inoremap jk     <esc>
 " }}}
 
-" buffers ---------------------- {{{
+" buffers {{{
 " quick buffer switching
 nnoremap <silent> <leader>[ :bprevious<cr>
 nnoremap <silent> <leader>] :bnext<cr>
 " }}}
 
-" dealing with whitespace ---------------------- {{{
+" dealing with whitespace {{{
 " strip trailing whitespace
 noremap <leader>s  :s/\s\+$//g<cr>
 noremap <leader>sa :%s/\s\+$//g<cr>
@@ -21,7 +21,7 @@ noremap <leader>sa :%s/\s\+$//g<cr>
 noremap <leader>db :g/^\s*$/d<cr>
 " }}}
 
-" changing case ---------------------- {{{
+" changing case {{{
 " titlecase a line (though currently not with rules like leaving 'a' alone)
 nnoremap <leader>T :s/\<\(\w\)\(\w*\)\>/\u\1\L\2/g<cr>
 
@@ -30,7 +30,7 @@ inoremap <c-U> <esc>mqviwU`qa
 nnoremap <c-U> mqviwU`q
 " }}}
 
-" config changes ---------------------- {{{
+" config changes {{{
 " for quick extra config changes, while I'm in the middle of stuff
 nnoremap <leader>ev :topleft :10split + $HOME/.vim/config/xtra.vim<cr>:setlocal nobuflisted<cr>
 nnoremap <leader>sv :source $MYVIMRC<cr>

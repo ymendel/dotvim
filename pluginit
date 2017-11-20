@@ -1,6 +1,6 @@
 call plug#begin('~/.vim/plugged')
 
-" file navigation ---------------------- {{{
+" file navigation {{{
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'tacahiroy/ctrlp-funky'
@@ -8,27 +8,27 @@ Plug 'majutsushi/tagbar', { 'on': 'TagbarToggle' }
 Plug 'jeetsukumaran/vim-buffergator'
 " }}}
 
-" file(type) specific ---------------------- {{{
+" file(type) specific {{{
 Plug 'tpope/vim-markdown'
 " }}}
 
-" editing ---------------------- {{{
+" editing {{{
 Plug 'scrooloose/nerdcommenter'
 Plug 'tpope/vim-surround'
 " }}}
 
-" version control ---------------------- {{{
+" version control {{{
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 " }}}
 
-" looks ---------------------- {{{
+" looks {{{
 Plug 'itchyny/lightline.vim'
 Plug 'nathanaelkane/vim-indent-guides'
 " }}}
 
-" other ---------------------- {{{
+" other {{{
 Plug 'mtth/scratch.vim'
 " }}}
 

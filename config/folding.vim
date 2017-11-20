@@ -10,7 +10,7 @@ noremap <tab> za
 noremap <s-tab> zA
 noremap <c-tab> zR
 
-" vim folding settings ---------------------- {{{
+" vim folding settings {{{
 augroup vim_folding
     autocmd!
     autocmd FileType vim setlocal foldmethod=marker

@@ -2,7 +2,7 @@ set nocompatible  " to hell with vi compatibility!
 set wildmenu      " fancy command completion menu!
 set modelines=1   " enable modelines
 
-" cpoptions ---------------------- {{{
+" cpoptions {{{
 " Miscellaneous Options. Values:
 "   a: ":read" sets window filename
 "   A: ":write" sets window filename
