@@ -6,6 +6,7 @@ if has("persistent_undo")
     set undodir=~/.vim/undofiles,/var/tmp,/tmp,.
 endif
 
+" handle one file open in two sessions {{{
 " stop annoying me every time I have a file open in two different vim sessions
 " 'e' is 'Edit Anyway' in this circumstance. Other options you could use here:
 " 'q' - quit
@@ -15,3 +16,4 @@ augroup simuledit
    autocmd!
    autocmd SwapExists * :let v:swapchoice = 'e'
 augroup END
+" }}}
