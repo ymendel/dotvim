@@ -26,8 +26,8 @@ noremap <leader>db :g/^\s*$/d<cr>
 nnoremap <leader>T :s/\<\(\w\)\(\w*\)\>/\u\1\L\2/g<cr>
 
 " uppercase current word (not sure what's going on with <c-u> not working, but I'm okay with <c-U> for now)
-inoremap <c-U> <esc>viwUviw<esc>a
-nnoremap <c-U> viwUviw<esc>
+inoremap <c-U> <esc>mqviwU`qa
+nnoremap <c-U> mqviwU`q
 " }}}
 
 " config changes ---------------------- {{{
