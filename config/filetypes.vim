@@ -26,6 +26,8 @@ augroup filetype_help
     autocmd!
     " don't show whitespace in help files
     autocmd FileType help setlocal nolist
+    " let me quit help more easily
+    autocmd FileType help nnoremap <buffer> q :q<cr>
 augroup END
 " }}}
 
