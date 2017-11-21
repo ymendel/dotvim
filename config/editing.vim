@@ -8,7 +8,7 @@ augroup curline_highlight
     autocmd!
     " highlight the current line in current window
     autocmd WinEnter,BufEnter * setlocal cursorline
-    autocmd WinLeave * setlocal nocursorline
+    autocmd WinLeave          * setlocal nocursorline
 augroup END
 endif
 " }}}
@@ -21,9 +21,9 @@ set backspace=indent,eol,start  " allow backspacing over everything in insert mo
 " FIXME autoindenting, no need to specify? {{{
 """ FIXME: everything works as expected without these, I'm sure
 """        that I'm just missing something
-"set cindent    " c-style language indentation
-"set autoindent " automatically indent new lines
-"set smartindent " automatically indent new lines
+" set cindent     " c-style language indentation
+" set autoindent  " automatically indent new lines
+" set smartindent " automatically indent new lines
 " }}}
 
 " four-space standard {{{

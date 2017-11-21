@@ -1,5 +1,5 @@
-set laststatus=2   " always show statusline
-set noshowmode     " lightline handles this fine (as seen below)
+set laststatus=2  " always show statusline
+set noshowmode    " lightline handles this fine (as seen below)
 
 " set up statusline, using lightline
 let g:lightline = {
