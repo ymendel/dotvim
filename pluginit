@@ -10,6 +10,7 @@ Plug 'jeetsukumaran/vim-buffergator'
 
 " file(type) specific {{{
 Plug 'tpope/vim-markdown'
+Plug 'digitalrounin/vim-yaml-folds'
 " }}}
 
 " editing {{{
