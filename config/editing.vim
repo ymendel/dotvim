@@ -16,6 +16,7 @@ endif
 
 set showmatch  " flash the matching bracket on inserting a )]} etc
 set backspace=indent,eol,start  " allow backspacing over everything in insert mode
+set formatoptions+=j  " remove comment leader when joining lines
 
 " indentation settings {{{
 " FIXME autoindenting, no need to specify? {{{
