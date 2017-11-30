@@ -32,6 +32,34 @@ nnoremap <c-U>      mqgUiw`q
 
 " config changes {{{
 " for quick extra config changes, while I'm in the middle of stuff
-nnoremap <leader>ev :topleft :10split + $HOME/.vim/config/xtra.vim<cr>:setlocal nobuflisted<cr>
+nnoremap <silent> <leader>ev :call XtraEdit()<cr>
 nnoremap <leader>sv :source $MYVIMRC<cr>
+
+" XtraEdit function (and related) {{{
+let g:xtra_edit_open = 0
+
+function! XtraEdit()
+    if g:xtra_edit_open
+        1 wincmd w  " the topleft should keep it at window 1
+    else
+        topleft 10 split + $HOME/.vim/config/xtra.vim
+        setlocal nobuflisted
+        let g:xtra_edit_open = 1
+    endif
+endfunction
+
+augroup xtra_edit_window_check
+    autocmd!
+    autocmd WinEnter * call XtraEditWindowCheck()
+augroup END
+
+function! XtraEditWindowCheck()
+    " depending on where I am, this could be more or less of the path
+    " so just grab the end of the path
+    let s:window_1_bufname_end = join(split(bufname(winbufnr(1)), '/')[-2:], '/')
+    if s:window_1_bufname_end !=# "config/xtra.vim"
+        let g:xtra_edit_open = 0
+    endif
+endfunction
+" }}}
 " }}}
