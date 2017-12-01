@@ -60,6 +60,15 @@ function! XtraEditWindowCheck()
     if s:window_1_bufname_end !=# "config/xtra.vim"
         let g:xtra_edit_open = 0
     endif
+
+    if g:xtra_edit_open
+        let s:cur_window = winnr()
+        1 wincmd w  " still banking on that topleft
+        resize 10
+        if s:cur_window != 1
+            wincmd p
+        endif
+    endif
 endfunction
 " }}}
 " }}}
