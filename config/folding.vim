@@ -6,9 +6,9 @@ set foldlevelstart=99  " start with all folds open when switching buffers
 " tab: toggle fold state
 " shift-tab: toggle state of outermost fold
 " ctrl-tab: open all folds
-noremap <tab>   za
-noremap <s-tab> zA
-noremap <c-tab> zR
+nnoremap <tab>   za
+nnoremap <s-tab> zA
+nnoremap <c-tab> zR
 
 " vim folding settings {{{
 augroup vim_folding
