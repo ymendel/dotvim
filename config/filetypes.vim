@@ -10,10 +10,11 @@ augroup filetype_ruby
     autocmd FileType ruby,eruby,yaml setlocal softtabstop=2 tabstop=2 shiftwidth=2
 
     " special files getting filetype set {{{
-    " Gemfile, Isolate, and config.ru are ruby
+    " Gemfile, Isolate, config.ru, *.cap are ruby
     autocmd BufNewFile,BufRead Gemfile   setfiletype ruby
     autocmd BufNewFile,BufRead Isolate   setfiletype ruby
     autocmd BufNewFile,BufRead config.ru setfiletype ruby
+    autocmd BufNewFile,BufRead *.cap     setfiletype ruby
     " }}}
 
     " set up compiler for ruby files
