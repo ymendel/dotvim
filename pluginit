@@ -28,6 +28,7 @@ Plug 'Xuyuanp/nerdtree-git-plugin'
 
 " looks {{{
 Plug 'itchyny/lightline.vim'
+Plug 'maximbaz/lightline-ale'
 Plug 'nathanaelkane/vim-indent-guides'
 " }}}
 
