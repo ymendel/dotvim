@@ -17,6 +17,7 @@ Plug 'digitalrounin/vim-yaml-folds'
 Plug 'scrooloose/nerdcommenter'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-abolish'
+Plug 'w0rp/ale'
 " }}}
 
 " version control {{{
