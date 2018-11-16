@@ -16,13 +16,14 @@ let g:lightline.component_type = {
     \  'linter_errors': 'error',
     \  'linter_ok': 'left',
     \ }
+let g:lightline#ale#indicator_checking = '…'
 
 let g:lightline.active = {}
 let g:lightline.active.left  = [ [ 'mode', 'paste' ],
                              \   [ 'gitbranch', 'readonly', 'filename', 'modified' ],
                              \ ]
 
-let g:lightline.active.right = [ [ 'linter_checking', 'linter_errors', 'linter_warnings', 'linter_ok' ],
+let g:lightline.active.right = [ [ 'linter_checking', 'linter_errors', 'linter_warnings' ],
                              \   [ 'lineinfo' ],
                              \   [ 'percent' ],
                              \   [ 'fileformat', 'fileencoding', 'filetype' ],
