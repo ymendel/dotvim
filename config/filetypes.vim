@@ -22,6 +22,14 @@ augroup filetype_ruby
 augroup END
 " }}}
 
+" scala filetype special settings {{{
+augroup filetype_scala
+    autocmd!
+    " scala files are indented by two
+    autocmd FileType scala setlocal softtabstop=2 tabstop=2 shiftwidth=2
+augroup END
+" }}}
+
 " help filetype special settings {{{
 augroup filetype_help
     autocmd!
