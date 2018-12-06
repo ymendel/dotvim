@@ -40,6 +40,14 @@ augroup filetype_help
 augroup END
 " }}}
 
+" git filetype special settings {{{
+augroup filetype_git
+    autocmd!
+    " let me quit git more easily
+    autocmd FileType git nnoremap <buffer> q :q<cr>
+augroup END
+" }}}
+
 " configs auto-set filetype {{{
 augroup filetype_configs
     autocmd!
