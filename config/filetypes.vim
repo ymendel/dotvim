@@ -30,6 +30,14 @@ augroup filetype_scala
 augroup END
 " }}}
 
+" lua filetype special settings {{{
+augroup filetype_lua
+    autocmd!
+    " lua files are indented by two
+    autocmd FileType lua setlocal softtabstop=2 tabstop=2 shiftwidth=2
+augroup END
+" }}}
+
 " help filetype special settings {{{
 augroup filetype_help
     autocmd!
