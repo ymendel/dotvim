@@ -38,6 +38,14 @@ augroup filetype_lua
 augroup END
 " }}}
 
+" sql filetype special settings {{{
+augroup filetype_sql
+    autocmd!
+    " sql files are indented by two
+    autocmd FileType sql setlocal softtabstop=2 tabstop=2 shiftwidth=2
+augroup END
+" }}}
+
 " help filetype special settings {{{
 augroup filetype_help
     autocmd!
