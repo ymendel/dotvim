@@ -18,3 +18,6 @@ set cpoptions=aABceFsWZ
 
 set showcmd  " shows incomplete command to the left of the ruler
 set hidden   " let buffers be hidden, instead of needing to be closed
+
+set exrc     " allow project-specific configuration
+set secure   " make the project-specific configs secure (unless owned by me)
