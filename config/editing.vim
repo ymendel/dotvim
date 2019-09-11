@@ -27,6 +27,10 @@ set formatoptions+=j  " remove comment leader when joining lines
 " set smartindent " automatically indent new lines
 " }}}
 
+" Re-indent when pasting
+nnoremap p p=`]<C-o>
+nnoremap P P=`]<C-o>
+
 " four-space standard {{{
 " for most code, use 4 space indents. specific filetypes are overridden elsewhere
 set softtabstop=4  " most of the time, we want a softtabstop of 4
