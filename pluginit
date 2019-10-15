@@ -2,10 +2,8 @@ call plug#begin('~/.vim/plugged')
 
 " file navigation {{{
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
-Plug 'ctrlpvim/ctrlp.vim'
-Plug 'tacahiroy/ctrlp-funky'
-Plug 'majutsushi/tagbar', { 'on': 'TagbarToggle' }
-Plug 'jeetsukumaran/vim-buffergator'
+Plug '/usr/local/opt/fzf'
+Plug 'junegunn/fzf.vim'
 " }}}
 
 " file(type) specific {{{
