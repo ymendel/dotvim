@@ -1,5 +1,6 @@
 nnoremap <leader>f :Files<cr>
 nnoremap <leader>g :GFiles<cr>
+nnoremap <leader>gg :GGrep<cr>
 nnoremap <leader>st :GFiles?<cr>
 nnoremap <leader>b :Buffers<cr>
 nnoremap <leader>t :Tags<cr>
@@ -27,6 +28,11 @@ let g:fzf_colors =
   \ 'marker':  ['fg', 'Keyword'],
   \ 'spinner': ['fg', 'Label'],
   \ 'header':  ['fg', 'Comment'] }
+
+command! -bang -nargs=* GGrep
+  \ call fzf#vim#grep(
+  \   'git grep --line-number '.shellescape(<q-args>), 0,
+  \   { 'dir': systemlist('git rev-parse --show-toplevel')[0] }, <bang>0)
 
 augroup fzf_status
     autocmd!
