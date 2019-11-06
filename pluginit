@@ -15,7 +15,9 @@ Plug 'digitalrounin/vim-yaml-folds'
 Plug 'scrooloose/nerdcommenter'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-abolish'
+Plug 'tpope/vim-repeat'
 Plug 'w0rp/ale'
+Plug 'AndrewRadev/splitjoin.vim'
 " }}}
 
 " version control {{{

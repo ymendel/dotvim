@@ -31,6 +31,12 @@ set formatoptions+=j  " remove comment leader when joining lines
 nnoremap p p=`]<C-o>
 nnoremap P P=`]<C-o>
 
+" handle splitting/joining with splitjoin
+let g:splitjoin_split_mapping = ''
+let g:splitjoin_join_mapping = ''
+nmap sj :SplitjoinJoin<cr>
+nmap ss :SplitjoinSplit<cr>
+
 " four-space standard {{{
 " for most code, use 4 space indents. specific filetypes are overridden elsewhere
 set softtabstop=4  " most of the time, we want a softtabstop of 4
