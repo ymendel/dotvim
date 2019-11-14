@@ -16,6 +16,7 @@ Plug 'scrooloose/nerdcommenter'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-abolish'
 Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-endwise'
 Plug 'w0rp/ale'
 Plug 'AndrewRadev/splitjoin.vim'
 " }}}
