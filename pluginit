@@ -23,6 +23,7 @@ Plug 'AndrewRadev/splitjoin.vim'
 
 " version control {{{
 Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-rhubarb'
 Plug 'airblade/vim-gitgutter'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 " }}}

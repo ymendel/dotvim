@@ -3,3 +3,5 @@ undofiles/*
 .netrwhist
 
 plugged/*
+
+config/local.vim
