@@ -6,6 +6,10 @@ inoremap <d-cr> <esc>
 inoremap jk     <esc>
 " }}}
 
+" filename (put in system paste buffer)
+" could get full filename with '%:p'
+nnoremap <leader>fn :let @*=expand('%')<cr>
+
 " buffers {{{
 " quick buffer switching
 nnoremap <silent> <leader>[ :bprevious<cr>
