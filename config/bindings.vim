@@ -8,7 +8,7 @@ inoremap jk     <esc>
 
 " filename (put in system paste buffer)
 " could get full filename with '%:p'
-nnoremap <leader>fn :let @*=expand('%')<cr>
+nnoremap <leader>fn :let @*=expand('%')<cr>:echo @*<cr>
 
 " buffers {{{
 " quick buffer switching
