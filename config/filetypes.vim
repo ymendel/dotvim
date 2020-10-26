@@ -6,9 +6,6 @@ filetype plugin indent on
 " ruby filetype special settings {{{
 augroup filetype_ruby
     autocmd!
-    " ruby and yaml files are indented by two
-    autocmd FileType ruby,eruby,yaml setlocal softtabstop=2 tabstop=2 shiftwidth=2
-
     " special files getting filetype set {{{
     " Gemfile, Isolate, config.ru, *.cap are ruby
     autocmd BufNewFile,BufRead Gemfile   setfiletype ruby
@@ -22,26 +19,13 @@ augroup filetype_ruby
 augroup END
 " }}}
 
-" scala filetype special settings {{{
-augroup filetype_scala
+" indentation level 2 for ruby/js/lua/scala/sql {{{
+augroup filetype_indent_two
     autocmd!
-    " scala files are indented by two
-    autocmd FileType scala setlocal softtabstop=2 tabstop=2 shiftwidth=2
-augroup END
-" }}}
-
-" lua filetype special settings {{{
-augroup filetype_lua
-    autocmd!
-    " lua files are indented by two
+    autocmd FileType ruby,eruby,yaml setlocal softtabstop=2 tabstop=2 shiftwidth=2
+    autocmd FileType javascript setlocal softtabstop=2 tabstop=2 shiftwidth=2
     autocmd FileType lua setlocal softtabstop=2 tabstop=2 shiftwidth=2
-augroup END
-" }}}
-
-" sql filetype special settings {{{
-augroup filetype_sql
-    autocmd!
-    " sql files are indented by two
+    autocmd FileType scala setlocal softtabstop=2 tabstop=2 shiftwidth=2
     autocmd FileType sql setlocal softtabstop=2 tabstop=2 shiftwidth=2
 augroup END
 " }}}
