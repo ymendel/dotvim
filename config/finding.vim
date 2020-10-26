@@ -1,6 +1,11 @@
 " command mappings {{{
-" nnoremap <leader>f :Files<cr>
-nnoremap <leader>f :call fzf#vim#files('', {'source': g:FzfFilesSource(), 'options': '--tiebreak=index'})<cr>
+let s:proximity_sort_path = $HOME . '/.cargo/bin/proximity-sort'
+
+if (executable('rg') && executable(s:proximity_sort_path))
+    nnoremap <leader>f :call fzf#vim#files('', {'source': g:FzfFilesSource(), 'options': '--tiebreak=index'})<cr>
+else
+    nnoremap <leader>f :Files<cr>
+endif
 nnoremap <leader>g :GFiles<cr>
 nnoremap <leader>gg :GGrep<cr>
 nnoremap <leader>st :GFiles?<cr>
@@ -19,15 +24,13 @@ command! -bang -nargs=* GGrep
 " }}}
 
 " proximity-sort handling {{{
-" TODO: ensure that proximity-sort and rg are installed
 function! g:FzfFilesSource()
     let l:base = fnamemodify(expand('%'), ':h:.:S')
-    let l:proximity_sort_path = $HOME . '/.cargo/bin/proximity-sort'
 
     if base == '.'
         return 'rg --files'
     else
-        return printf('rg --files | %s %s', l:proximity_sort_path, expand('%'))
+        return printf('rg --files | %s %s', s:proximity_sort_path, expand('%'))
     endif
 endfunction
 " }}}
