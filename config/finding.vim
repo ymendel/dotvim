@@ -47,6 +47,7 @@ function! g:FzfFilesSource()
 endfunction
 " }}}
 " }}}
+" }}}
 
 " looks {{{
 let g:fzf_layout = { 'down': '~30%' }
