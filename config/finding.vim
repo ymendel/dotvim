@@ -1,8 +1,20 @@
 " command mappings {{{
+" command-support vars {{{
+let g:fzf_preview_cmd = "cat {}"
+
+" For syntax highlighting, `brew install bat`
+if executable('bat')
+  let g:fzf_preview_cmd = g:plug_home . "/fzf.vim/bin/preview.sh {}"
+endif
+
 let s:proximity_sort_path = $HOME . '/.cargo/bin/proximity-sort'
+" }}}
 
 if (executable('rg') && executable(s:proximity_sort_path))
-    nnoremap <leader>f :call fzf#vim#files('', {'source': g:FzfFilesSource(), 'options': '--tiebreak=index'})<cr>
+    nnoremap <leader>f :call fzf#vim#files('', { 'source': g:FzfFilesSource(),
+        \ 'options': [
+        \   '--tiebreak=index', '--preview', g:fzf_preview_cmd
+        \  ]})<cr>
 else
     nnoremap <leader>f :Files<cr>
 endif
