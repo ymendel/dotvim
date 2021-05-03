@@ -48,6 +48,14 @@ augroup filetype_git
 augroup END
 " }}}
 
+" fugitive filetype special settings {{{
+augroup filetype_fugitive
+    autocmd!
+    " let me quit git more easily
+    autocmd FileType fugitiveblame nnoremap <buffer> q :q<cr>
+augroup END
+" }}}
+
 " configs auto-set filetype {{{
 augroup filetype_configs
     autocmd!
