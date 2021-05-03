@@ -55,5 +55,8 @@ augroup filetype_configs
     autocmd BufNewFile,BufRead ~/dev/projects/mine/dotvim/* setfiletype vim
     autocmd BufNewFile,BufRead ~/.vim/*  setfiletype vim
     autocmd BufNewFile,BufRead ~/.bash/* setfiletype sh
+    autocmd BufNewFile,BufRead ~/.bashrc setfiletype sh
+    autocmd BufNewFile,BufRead ~/.local_bashrc setfiletype sh
+    autocmd BufNewFile,BufRead ~/.bash_profile setfiletype sh
 augroup END
 " }}}
