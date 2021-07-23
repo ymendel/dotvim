@@ -5,4 +5,9 @@ else
   let g:gitgutter_sign_column_always = 1
 endif
 
+highlight! link SignColumn Normal
+highlight! GitGutterAdd guifg=PaleGreen
+highlight! GitGutterChange guifg=yellow
+highlight! GitGutterDelete guifg=OrangeRed
+
 nnoremap <leader>gh :GitGutterLineHighlightsToggle<cr>
