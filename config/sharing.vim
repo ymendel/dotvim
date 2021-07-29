@@ -1,9 +1,9 @@
 function! SharemodeSetView()
     if has("gui_running")
-        if get(g:, 'sharing_mode', 0)
+        if g:sharing_mode
             set guifont=Menlo:h20
             set columns=113
-            set lines=29
+            set lines=30
         else
             set guifont=Menlo:h13
             set columns=170
@@ -13,11 +13,7 @@ function! SharemodeSetView()
 endfunction
 
 function! SharemodeToggle()
-    if get(g:, 'sharing_mode')
-        let g:sharing_mode=0
-    else
-        let g:sharing_mode=1
-    endif
+    let g:sharing_mode=!g:sharing_mode
     call SharemodeSetView()
 endfunction
 
