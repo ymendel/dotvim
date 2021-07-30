@@ -20,7 +20,7 @@ else
 endif
 nnoremap <leader>g :GFiles<cr>
 nnoremap <leader>gg :GGrep<cr>
-nnoremap <leader>st :GFiles?<cr>
+nnoremap <leader>gs :GFiles?<cr>
 nnoremap <leader>b :Buffers<cr>
 nnoremap <leader>t :Tags<cr>
 nnoremap <leader>m :Maps<cr>
