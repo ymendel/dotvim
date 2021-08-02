@@ -19,6 +19,7 @@ else
     nnoremap <leader>f :Files<cr>
 endif
 nnoremap <leader>g :GFiles<cr>
+nnoremap <leader>gf :GFiles<cr>
 nnoremap <leader>gg :GGrep<cr>
 nnoremap <leader>gs :GFiles?<cr>
 nnoremap <leader>b :Buffers<cr>
