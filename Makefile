@@ -1,14 +1,22 @@
-default:
-	echo "use 'install' target"
+default: install
 
-install: vimdir vimrc
+install: links plugs
 
-vimdir:
-	test -L ~/.vim || ln -s `pwd` ~/.vim
+links: link_vimdir link_vimrc
 
-vimrc: vimdir
+link_vimdir:
+	test -L ~/.vim || ln -s ${PWD} ~/.vim
+
+link_vimrc:
 	test -L ~/.vimrc || ln -s ~/.vim/vimrc ~/.vimrc
 
-clean:
-	rm ~/.vim
-	rm ~/.vimrc
+plugs:
+	vim +PlugInstall +qall
+
+clean: clean_vimdir clean_vimrc
+
+clean_vimdir:
+	test -L ~/.vim && rm ~/.vim
+
+clean_vimrc:
+	test -L ~/.vimrc && rm ~/.vimrc
