@@ -19,10 +19,11 @@ augroup filetype_ruby
 augroup END
 " }}}
 
-" indentation with tabs for make {{
+" indentation with tabs for make/gitconfig {{
 augroup filetype_indent_tabs
     autocmd!
     autocmd FileType make setlocal noexpandtab
+    autocmd FileType gitconfig setlocal noexpandtab
 augroup END
 " }}}
 
