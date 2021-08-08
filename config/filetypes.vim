@@ -19,6 +19,13 @@ augroup filetype_ruby
 augroup END
 " }}}
 
+" indentation with tabs for make {{
+augroup filetype_indent_tabs
+    autocmd!
+    autocmd FileType make setlocal noexpandtab
+augroup END
+" }}}
+
 " indentation level 2 for ruby/js/lua/scala/sql {{{
 augroup filetype_indent_two
     autocmd!
