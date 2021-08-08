@@ -4,11 +4,26 @@ Yup, I use vim. I'm hip.
 
 ## Installation
 
-Clone and go
+### Automated
+
+There's a Makefile to make this simple. Just clone and go.
+
+    $ git clone https://github.com/ymendel/dotvim.git
+    $ cd dotvim
+    $ make
+
+See [the Makefile](Makefile) for the specific steps, or keep on reading.
+
+### Manual
+
+If you want to make your own choices or simply go through all the steps:
 
     $ git clone https://github.com/ymendel/dotvim.git ~/.vim
     $ ln -s ~/.vim/vimrc ~/.vimrc
     $ vim +PlugInstall +qall
+
+nb. This is slightly different because the standard Makefile installation
+links ~/.vim to wherever the repo has been cloned.
 
 ## Appreciation
 
