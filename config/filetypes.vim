@@ -3,6 +3,9 @@ syntax on  " syntax highlighting
 " use filetype plugins to determine indent settings
 filetype plugin indent on
 
+" fzf for finding/setting filetype
+nnoremap <leader>ft :Filetypes<cr>
+
 " ruby filetype special settings {{{
 augroup filetype_ruby
     autocmd!
