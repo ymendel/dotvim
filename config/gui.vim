@@ -3,6 +3,9 @@ if has("gui_running")
 set mouse=a  " use mouse when possible
 set guifont=Menlo:h13
 
+" Don’t blink cursor in normal mode
+set guicursor=n:blinkon0
+
 " set default window size
 set columns=170
 set lines=48
