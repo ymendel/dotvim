@@ -10,16 +10,35 @@ endif
 let s:proximity_sort_path = $HOME . '/.cargo/bin/proximity-sort'
 " }}}
 
-if (executable('rg') && executable(s:proximity_sort_path))
-    nnoremap <leader>f :call fzf#vim#files('', { 'source': g:FzfFilesSource(),
+" proximity-sort mapping decisions {{{
+if executable(s:proximity_sort_path)
+    if executable('rg')
+        nnoremap <leader>f :call fzf#vim#files('', { 'source': g:FzfProximitySortSource('rg --files'),
+            \ 'options': [
+            \   '--tiebreak=index', '--preview', g:fzf_preview_cmd
+            \  ]})<cr>
+    else
+        " FIXME: just a single else check to decide that f is :Files instead
+        " of the proximity-sorting version
+        nnoremap <leader>f :Files<cr>
+    endif
+
+    " FIXME: do this more cleanly, not the whole block twice explicitly
+    nnoremap <leader>g :call fzf#vim#gitfiles('', { 'source': g:FzfProximitySortSource('git ls-files'),
+        \ 'options': [
+        \   '--tiebreak=index', '--preview', g:fzf_preview_cmd
+        \  ]})<cr>
+
+    nnoremap <leader>gf :call fzf#vim#gitfiles('', { 'source': g:FzfProximitySortSource('git ls-files'),
         \ 'options': [
         \   '--tiebreak=index', '--preview', g:fzf_preview_cmd
         \  ]})<cr>
 else
     nnoremap <leader>f :Files<cr>
+    nnoremap <leader>g :GFiles<cr>
+    nnoremap <leader>gf :GFiles<cr>
 endif
-nnoremap <leader>g :GFiles<cr>
-nnoremap <leader>gf :GFiles<cr>
+" }}}
 nnoremap <leader>gg :GGrep<cr>
 nnoremap <leader>gs :GFiles?<cr>
 nnoremap <leader>b :Buffers<cr>
@@ -37,13 +56,13 @@ command! -bang -nargs=* GGrep
 " }}}
 
 " proximity-sort handling {{{
-function! g:FzfFilesSource()
+function! g:FzfProximitySortSource(command)
     let l:base = fnamemodify(expand('%'), ':h:.:S')
 
     if base == '.'
-        return 'rg --files'
+        return printf('%s', a:command)
     else
-        return printf('rg --files | %s %s', s:proximity_sort_path, expand('%'))
+        return printf('%s | %s %s', a:command, s:proximity_sort_path, expand('%'))
     endif
 endfunction
 " }}}
