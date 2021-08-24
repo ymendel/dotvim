@@ -13,6 +13,9 @@ link_vimrc:
 plugs:
 	vim +PlugInstall +qall
 
+update:
+	vim +PlugUpgrade +PlugUpdate +qall
+
 clean: clean_vimdir clean_vimrc
 
 clean_vimdir:
