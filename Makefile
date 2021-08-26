@@ -4,11 +4,14 @@ install: links plugs
 
 links: link_vimdir link_vimrc
 
-link_vimdir:
-	test -L ~/.vim || ln -s ${PWD} ~/.vim
+link_vimdir: ~/.vim
+link_vimrc: ~/.vimrc
 
-link_vimrc:
-	test -L ~/.vimrc || ln -s ~/.vim/vimrc ~/.vimrc
+~/.vim:
+	ln -s ${PWD} ~/.vim
+
+~/.vimrc:
+	ln -s ~/.vim/vimrc ~/.vimrc
 
 plugs:
 	vim +PlugInstall +qall
@@ -19,7 +22,7 @@ update:
 clean: clean_vimdir clean_vimrc
 
 clean_vimdir:
-	test -L ~/.vim && rm ~/.vim
+	rm -f ~/.vim
 
 clean_vimrc:
-	test -L ~/.vimrc && rm ~/.vimrc
+	rm -f ~/.vimrc
