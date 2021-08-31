@@ -1,13 +1,4 @@
 " command mappings {{{
-" command-support vars {{{
-let g:fzf_preview_cmd = "cat {}"
-
-" For syntax highlighting, `brew install bat`
-if executable('bat')
-  let g:fzf_preview_cmd = g:plug_home . "/fzf.vim/bin/preview.sh {}"
-endif
-" }}}
-
 nnoremap <leader>f :Files<cr>
 nnoremap <leader>g :GFiles<cr>
 nnoremap <leader>gf :GFiles<cr>
@@ -16,13 +7,14 @@ nnoremap <leader>gs :GFiles?<cr>
 nnoremap <leader>b :Buffers<cr>
 nnoremap <leader>t :Tags<cr>
 nnoremap <leader>m :Maps<cr>
+" }}}
 
 " supporting commands {{{
 " GGrep {{{
 command! -bang -nargs=* GGrep
             \ call fzf#vim#grep(
             \   'git grep --line-number '.shellescape(<q-args>), 0,
-            \   { 'dir': systemlist('git rev-parse --show-toplevel')[0], 'options': '--delimiter : --nth 3..' },
+            \   fzf#vim#with_preview({ 'dir': systemlist('git rev-parse --show-toplevel')[0], 'options': '--delimiter : --nth 3..' }),
             \   <bang>0)
 
 " }}}
@@ -35,19 +27,19 @@ if executable(s:proximity_sort_path)
     " Files {{{
     if executable('rg')
         command! -bang -nargs=? -complete=dir Files
-            \ call fzf#vim#files(<q-args>, { 'source': s:FzfProximitySortSource('rg --files'),
-                \ 'options': [
-                \   '--tiebreak=index', '--preview', g:fzf_preview_cmd
-                \  ]}, <bang>0)
+            \ call fzf#vim#files(<q-args>, fzf#vim#with_preview({
+                \ 'source': s:FzfProximitySortSource('rg --files'),
+                \ 'options': [ '--tiebreak=index' ]
+                \  }), <bang>0)
     endif
     " }}}
 
     " GFiles {{{
     command! -bang -nargs=? -complete=dir GFiles
-        \ call fzf#vim#gitfiles('', { 'source': s:FzfProximitySortSource('git ls-files'),
-            \ 'options': [
-            \   '--tiebreak=index', '--preview', g:fzf_preview_cmd
-            \  ]}, <bang>0)
+        \ call fzf#vim#gitfiles('', fzf#vim#with_preview({
+            \ 'source': s:FzfProximitySortSource('git ls-files'),
+            \ 'options': [ '--tiebreak=index' ]
+            \  }), <bang>0)
     " }}}
 
     " command-providing function {{{
