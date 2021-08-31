@@ -42,6 +42,18 @@ if executable(s:proximity_sort_path)
             \  }), <bang>0)
     " }}}
 
+    " GStatus {{{
+    " no proximity handling until I understand both how to handle the
+    " proximity sorting _and_ get a good diff preview
+    " but still defining here because GFiles is taken over
+    command! -bang -nargs=? -complete=dir GStatus
+        \ call fzf#vim#gitfiles('?', {
+            \ 'source': 'git status --short',
+            \ 'options': [ '--tiebreak=index' ]
+            \  }, <bang>0)
+    " }}}
+    nnoremap <leader>gs :GStatus<cr>
+
     " command-providing function {{{
     function! s:FzfProximitySortSource(command)
         let l:base = fnamemodify(expand('%'), ':h:.:S')
