@@ -37,7 +37,7 @@ if executable(s:proximity_sort_path)
     " GFiles {{{
     command! -bang -nargs=? -complete=dir GFiles
         \ call fzf#vim#gitfiles('', fzf#vim#with_preview({
-            \ 'source': s:FzfProximitySortSource('git ls-files'),
+            \ 'source': s:FzfProximitySortSource('git ls-files --deduplicate'),
             \ 'options': [ '--tiebreak=index' ]
             \  }), <bang>0)
     " }}}
