@@ -46,6 +46,7 @@ let g:lightline.component_type = {
 let g:lightline#ale#indicator_checking = '…'
 " }}}
 
+" statusline setup {{{
 " active statusline setup {{{
 let g:lightline.active = {}
 let g:lightline.active.left  = [ [ 'mode', 'paste' ],
@@ -57,4 +58,13 @@ let g:lightline.active.right = [ [ 'linter_checking', 'linter_errors', 'linter_w
                              \   [ 'percent' ],
                              \   [ 'fileformat', 'fileencoding', 'filetype' ],
                              \ ]
+" }}}
+
+" inactive statusline setup {{{
+let g:lightline.inactive = {}
+let g:lightline.inactive.left  = [ [ 'filename', 'modified' ] ]
+let g:lightline.inactive.right = [ [ 'lineinfo' ],
+                               \   [ 'percent' ],
+                               \ ]
+" }}}
 " }}}
