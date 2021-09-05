@@ -6,7 +6,7 @@ let g:lightline = { 'colorscheme': 'wombat' }
 " support functions {{{
 " mode {{{
 function! LightlineMode()
-    if &filetype =~# '\v(help|fugitiveblame)'
+    if &filetype =~# '\v(help|fugitiveblame|nerdtree)'
         return ''
     endif
 
@@ -16,7 +16,7 @@ endfunction
 
 " git branch {{{
 function! LightlineGitbranch()
-    if &filetype =~# '\v(help|fugitiveblame)'
+    if &filetype =~# '\v(help|fugitiveblame|nerdtree)'
         return ''
     endif
 
@@ -26,7 +26,7 @@ endfunction
 
 " readonly {{{
 function! LightlineReadonly()
-    if &filetype ==# 'help'
+    if &filetype =~# '\v(help|nerdtree)'
         return ''
     endif
 
@@ -61,7 +61,7 @@ endfunction
 
 " file format {{{
 function! LightlineFileFormat()
-    if &filetype =~# '\v(help|fugitiveblame)'
+    if &filetype =~# '\v(help|fugitiveblame|nerdtree)'
         return ''
     endif
 
@@ -71,7 +71,7 @@ endfunction
 
 " file encoding {{{
 function! LightlineFileEncoding()
-    if &filetype =~# '\v(help|fugitiveblame)'
+    if &filetype =~# '\v(help|fugitiveblame|nerdtree)'
         return ''
     endif
 
@@ -80,6 +80,16 @@ function! LightlineFileEncoding()
     else
         return &encoding
     endif
+endfunction
+" }}}
+
+" file type {{{
+function! LightlineFileType()
+    if &filetype ==# 'nerdtree'
+        return ''
+    endif
+
+    return empty(&filetype) ? 'no ft' : &filetype
 endfunction
 " }}}
 
@@ -120,6 +130,7 @@ let g:lightline.component_function = {
     \  'filename': 'LightlineFilename',
     \  'fileformat': 'LightlineFileFormat',
     \  'fileencoding': 'LightlineFileEncoding',
+    \  'filetype': 'LightlineFileType',
     \  'lineinfo': 'LightlineLineinfo',
     \  'percent': 'LightlinePercent',
     \ }
