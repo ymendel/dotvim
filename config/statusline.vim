@@ -4,32 +4,124 @@ set noshowmode    " lightline handles this fine (as seen below)
 let g:lightline = { 'colorscheme': 'wombat' }
 
 " support functions {{{
+" mode {{{
+function! LightlineMode()
+    if &filetype =~# '\v(help|fugitiveblame)'
+        return ''
+    endif
+
+    return lightline#mode()
+endfunction
+" }}}
+
+" git branch {{{
+function! LightlineGitbranch()
+    if &filetype =~# '\v(help|fugitiveblame)'
+        return ''
+    endif
+
+    return fugitive#head()
+endfunction
+" }}}
+
 " readonly {{{
 function! LightlineReadonly()
-  return &readonly && &filetype !=# 'help' ? 'RO' : ''
+    if &filetype ==# 'help'
+        return ''
+    endif
+
+    return &readonly ? 'RO' : ''
 endfunction
 " }}}
 
 " mergemode {{{
 function! LightlineMergemode()
-  if get(g:, 'mergetool_in_merge_mode', 0)
-    return '↸'
-  endif
+    if get(g:, 'mergetool_in_merge_mode', 0)
+        return '↸'
+    endif
 
-  if &diff
-    return '↹'
-  endif
+    if &diff
+        return '↹'
+    endif
 
-  return ''
+    return ''
+endfunction
+" }}}
+
+" filename {{{
+function! LightlineFilename()
+    if &filetype ==# 'fugitiveblame'
+        return expand('#:t')
+    endif
+
+    let l:filename = expand('%:t')
+    return empty(l:filename) ? '[No Name]' : l:filename
+endfunction
+" }}}
+
+" file format {{{
+function! LightlineFileFormat()
+    if &filetype =~# '\v(help|fugitiveblame)'
+        return ''
+    endif
+
+    return &fileformat
+endfunction
+" }}}
+
+" file encoding {{{
+function! LightlineFileEncoding()
+    if &filetype =~# '\v(help|fugitiveblame)'
+        return ''
+    endif
+
+    if &fileencoding !=# ''
+        return &fileencoding
+    else
+        return &encoding
+    endif
+endfunction
+" }}}
+
+" lineinfo {{{
+function! LightlineLineinfo()
+    if &filetype ==# 'fugitiveblame'
+        return ''
+    endif
+
+    let l:pos  = getcharpos('.')
+    let l:line = empty(wordcount()['bytes']) ? 0 : l:pos[1]
+    let l:col  = empty(getline('.')) ? 0 : l:pos[2]
+
+    return printf('%3d:%-2d', l:line, l:col)
+endfunction
+" }}}
+
+" percent {{{
+function! LightlinePercent()
+    if &filetype ==# 'fugitiveblame'
+        return ''
+    endif
+
+    let l:line = line('.')
+    let l:lastline = line('$')
+
+    return printf('%3d%%', ((l:line * 100)/l:lastline))
 endfunction
 " }}}
 " }}}
 
 " component setup {{{
 let g:lightline.component_function = {
-    \  'gitbranch': 'fugitive#head',
+    \  'mode': 'LightlineMode',
+    \  'gitbranch': 'LightlineGitbranch',
     \  'mergemode': 'LightlineMergemode',
     \  'readonly': 'LightlineReadonly',
+    \  'filename': 'LightlineFilename',
+    \  'fileformat': 'LightlineFileFormat',
+    \  'fileencoding': 'LightlineFileEncoding',
+    \  'lineinfo': 'LightlineLineinfo',
+    \  'percent': 'LightlinePercent',
     \ }
 let g:lightline.component_expand = {
     \  'linter_checking': 'lightline#ale#checking',
