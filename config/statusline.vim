@@ -51,7 +51,7 @@ endfunction
 " filename {{{
 function! LightlineFilename()
     if &filetype ==# 'fugitiveblame'
-        return expand('#:t')
+        return ''
     endif
 
     let l:filename = expand('%:t')
@@ -85,7 +85,7 @@ endfunction
 
 " file type {{{
 function! LightlineFileType()
-    if &filetype ==# 'nerdtree'
+    if &filetype =~# '\v(fugitiveblame|nerdtree)'
         return ''
     endif
 
