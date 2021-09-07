@@ -54,6 +54,10 @@ function! LightlineFilename()
         return ''
     endif
 
+    if exists('b:NERDTreeRoot')
+        return substitute(b:NERDTreeRoot.path.str(), '^' . $HOME, '~', '')
+    endif
+
     let l:filename = expand('%:t')
     return empty(l:filename) ? '[No Name]' : l:filename
 endfunction
