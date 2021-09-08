@@ -6,7 +6,7 @@ let g:lightline = { 'colorscheme': 'wombat' }
 " support functions {{{
 " mode {{{
 function! LightlineMode()
-    if &filetype =~# '\v(help|fugitiveblame|nerdtree)'
+    if &filetype =~# '\v(help|fugitiveblame|nerdtree|twiggy)'
         return ''
     endif
 
@@ -16,7 +16,7 @@ endfunction
 
 " git branch {{{
 function! LightlineGitbranch()
-    if &filetype =~# '\v(help|fugitiveblame|nerdtree)'
+    if &filetype =~# '\v(help|fugitiveblame|nerdtree|twiggy)'
         return ''
     endif
 
@@ -65,7 +65,7 @@ endfunction
 
 " file format {{{
 function! LightlineFileFormat()
-    if &filetype =~# '\v(help|fugitiveblame|nerdtree)'
+    if &filetype =~# '\v(help|fugitiveblame|nerdtree|twiggy)'
         return ''
     endif
 
@@ -75,7 +75,7 @@ endfunction
 
 " file encoding {{{
 function! LightlineFileEncoding()
-    if &filetype =~# '\v(help|fugitiveblame|nerdtree)'
+    if &filetype =~# '\v(help|fugitiveblame|nerdtree|twiggy)'
         return ''
     endif
 
@@ -89,7 +89,7 @@ endfunction
 
 " file type {{{
 function! LightlineFileType()
-    if &filetype =~# '\v(fugitiveblame|nerdtree)'
+    if &filetype =~# '\v(fugitiveblame|nerdtree|twiggy)'
         return ''
     endif
 
