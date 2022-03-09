@@ -34,7 +34,7 @@ augroup END
 augroup filetype_indent_two
     autocmd!
     autocmd FileType ruby,eruby,yaml setlocal softtabstop=2 tabstop=2 shiftwidth=2
-    autocmd FileType javascript setlocal softtabstop=2 tabstop=2 shiftwidth=2
+    autocmd FileType javascript,javascriptreact setlocal softtabstop=2 tabstop=2 shiftwidth=2
     autocmd FileType lua setlocal softtabstop=2 tabstop=2 shiftwidth=2
     autocmd FileType scala setlocal softtabstop=2 tabstop=2 shiftwidth=2
     autocmd FileType sql setlocal softtabstop=2 tabstop=2 shiftwidth=2
