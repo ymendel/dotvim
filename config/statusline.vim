@@ -20,7 +20,7 @@ function! LightlineGitbranch()
         return ''
     endif
 
-    return fugitive#head()
+    return FugitiveHead()
 endfunction
 " }}}
 
