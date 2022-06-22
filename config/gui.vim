@@ -1,7 +1,9 @@
 if has("gui_running")
 
-let g:guifontname="Menlo"
+let g:guifontname="Fira Code"
 let g:guifontsize="13"
+
+set macligatures
 
 set mouse=a  " use mouse when possible
 let &guifont=g:guifontname . ":h" . g:guifontsize

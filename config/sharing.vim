@@ -3,7 +3,7 @@ function! SharemodeSetView()
         if g:sharing_mode
             let g:guifontsize="20"
             set columns=113
-            set lines=30
+            set lines=32
         else
             let g:guifontsize="13"
             set columns=170
