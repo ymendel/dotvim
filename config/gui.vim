@@ -1,7 +1,10 @@
 if has("gui_running")
 
+let g:guifontname="Menlo"
+let g:guifontsize="13"
+
 set mouse=a  " use mouse when possible
-set guifont=Menlo:h13
+let &guifont=g:guifontname . ":h" . g:guifontsize
 
 " Don’t blink cursor in normal mode
 set guicursor=n:blinkon0

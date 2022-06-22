@@ -1,14 +1,16 @@
 function! SharemodeSetView()
     if has("gui_running")
         if g:sharing_mode
-            set guifont=Menlo:h20
+            let g:guifontsize="20"
             set columns=113
             set lines=30
         else
-            set guifont=Menlo:h13
+            let g:guifontsize="13"
             set columns=170
             set lines=48
         endif
+
+        let &guifont=g:guifontname . ":h" . g:guifontsize
     endif
 endfunction
 
