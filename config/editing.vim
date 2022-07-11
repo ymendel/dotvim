@@ -31,10 +31,6 @@ set formatoptions+=j  " remove comment leader when joining lines
 nnoremap p p=`]<C-o>
 nnoremap P P=`]<C-o>
 
-" set splitting direction
-set splitbelow
-set splitright
-
 " handle splitting/joining with splitjoin
 let g:splitjoin_split_mapping = ''
 let g:splitjoin_join_mapping = ''

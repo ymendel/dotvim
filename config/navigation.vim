@@ -14,3 +14,7 @@ endfunction
 " }}}
 
 nnoremap <leader>d :call NERDTreeMaybeFindToggle()<cr>
+
+" set splitting direction
+set splitbelow
+set splitright
