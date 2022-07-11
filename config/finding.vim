@@ -113,5 +113,5 @@ endfunction
 let g:fzf_action = {
   \ 'ctrl-q': function('s:build_quickfix_list'),
   \ 'ctrl-t': 'tab split',
-  \ 'ctrl-s': 'rightbelow split',
-  \ 'ctrl-v': 'rightbelow vsplit' }
+  \ 'ctrl-s': 'split',
+  \ 'ctrl-v': 'vsplit' }
