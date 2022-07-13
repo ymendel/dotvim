@@ -18,3 +18,6 @@ nnoremap <leader>d :call NERDTreeMaybeFindToggle()<cr>
 " set splitting direction
 set splitbelow
 set splitright
+
+" but make help appear where I want
+cnoremap help top help
