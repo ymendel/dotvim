@@ -54,6 +54,15 @@ if executable(s:proximity_sort_path)
     " }}}
     nnoremap <leader>gs :GStatus<cr>
 
+    " GChanged {{{
+    command! -bang -nargs=? -complete=dir GChanged
+        \ call fzf#vim#gitfiles('', fzf#vim#with_preview({
+            \ 'source': s:FzfProximitySortSource('git files'),
+            \ 'options': [ '--tiebreak=index' ]
+            \  }), <bang>0)
+    " }}}
+    nnoremap <leader>gc :GChanged<cr>
+
     " command-providing function {{{
     function! s:FzfProximitySortSource(command)
         let l:base = fnamemodify(expand('%'), ':h:.:S')
