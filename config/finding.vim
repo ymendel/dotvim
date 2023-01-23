@@ -35,12 +35,19 @@ if executable(s:proximity_sort_path)
     " }}}
 
     " GFiles {{{
-    command! -bang -nargs=? -complete=dir GFiles
-        \ call fzf#vim#gitfiles('', fzf#vim#with_preview({
+    command! -bang -nargs=? -complete=dir GFilesRedo
+        \ call fzf#vim#files('', fzf#vim#with_preview({
             \ 'source': s:FzfProximitySortSource('git ls-files --deduplicate'),
             \ 'options': [ '--tiebreak=index' ]
             \  }), <bang>0)
+    command! -bang -nargs=? -complete=dir GFilesRun
+        \ call fzf#run(fzf#wrap('gfiles', {
+            \ 'source': s:FzfProximitySortSource('git ls-files -z --deduplicate'),
+            \ 'options': '--tiebreak=index -m --read0 --prompt "GitFiles> "'
+            \  }, <bang>0))
     " }}}
+    nnoremap <leader>gx :GFilesRedo<cr>
+    nnoremap <leader>gz :GFilesRun<cr>
 
     " GStatus {{{
     " no proximity handling until I understand both how to handle the
