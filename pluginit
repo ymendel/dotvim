@@ -22,6 +22,7 @@ Plug 'tpope/vim-speeddating'
 Plug 'w0rp/ale'
 Plug 'zackhsi/sorbet-lsp'
 Plug 'AndrewRadev/splitjoin.vim'
+Plug 'github/copilot.vim'
 " }}}
 
 " project specific {{{
