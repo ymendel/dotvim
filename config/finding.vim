@@ -3,6 +3,7 @@ nnoremap <leader>f :Files<cr>
 nnoremap <leader>g :GFiles<cr>
 nnoremap <leader>gf :GFiles<cr>
 nnoremap <leader>gg :GGrep<cr>
+nnoremap <leader>ggc :GGrepCode<cr>
 nnoremap <leader>gs :GFiles?<cr>
 nnoremap <leader>b :Buffers<cr>
 nnoremap <leader>t :Tags<cr>
@@ -11,6 +12,7 @@ nnoremap <leader>m :Maps<cr>
 
 " supporting commands {{{
 " GGrep {{{
+" all files {{{
 command! -bang -nargs=* GGrep
             \ call fzf#vim#grep(
             \   'git grep --line-number '.shellescape(<q-args>), 0,
@@ -18,6 +20,16 @@ command! -bang -nargs=* GGrep
             \   <bang>0)
 
 " }}}
+" code-only {{{
+command! -bang -nargs=* GGrepCode
+            \ call fzf#vim#grep(
+            \   'git grep --line-number '.shellescape(<q-args>).' -- :*.rb :^*_spec.rb', 0,
+            \   fzf#vim#with_preview({ 'dir': systemlist('git rev-parse --show-toplevel')[0], 'options': '--delimiter : --nth 3..' }),
+            \   <bang>0)
+
+" }}}
+" }}}
+
 
 " proximity-sort handling {{{
 let s:proximity_sort_path = $HOME . '/.cargo/bin/proximity-sort'
