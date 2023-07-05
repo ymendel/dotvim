@@ -10,6 +10,7 @@ Plug 'junegunn/fzf.vim'
 Plug 'vitalk/vim-shebang'
 Plug 'tpope/vim-markdown'
 Plug 'digitalrounin/vim-yaml-folds'
+Plug 'elixir-editors/vim-elixir'
 " }}}
 
 " editing {{{

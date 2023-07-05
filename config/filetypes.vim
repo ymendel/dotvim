@@ -30,7 +30,7 @@ augroup filetype_indent_tabs
 augroup END
 " }}}
 
-" indentation level 2 for ruby/js/lua/scala/sql {{{
+" indentation level 2 for ruby/js/lua/scala/sql/elixir {{{
 augroup filetype_indent_two
     autocmd!
     autocmd FileType ruby,eruby,yaml setlocal softtabstop=2 tabstop=2 shiftwidth=2
@@ -38,6 +38,7 @@ augroup filetype_indent_two
     autocmd FileType lua setlocal softtabstop=2 tabstop=2 shiftwidth=2
     autocmd FileType scala setlocal softtabstop=2 tabstop=2 shiftwidth=2
     autocmd FileType sql setlocal softtabstop=2 tabstop=2 shiftwidth=2
+    autocmd FileType elixir setlocal softtabstop=2 tabstop=2 shiftwidth=2
 augroup END
 " }}}
 
