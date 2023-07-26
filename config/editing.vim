@@ -30,6 +30,9 @@ set formatoptions+=j  " remove comment leader when joining lines
 " Re-indent when pasting
 nnoremap p p=`]<C-o>
 nnoremap P P=`]<C-o>
+" but also allow "unchanged paste"
+nnoremap up p
+nnoremap UP P
 
 " handle splitting/joining with splitjoin
 let g:splitjoin_split_mapping = ''
