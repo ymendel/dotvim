@@ -40,11 +40,11 @@ let g:splitjoin_join_mapping = ''
 nmap sj :SplitjoinJoin<cr>
 nmap ss :SplitjoinSplit<cr>
 
-" four-space standard {{{
-" for most code, use 4 space indents. specific filetypes are overridden elsewhere
-set softtabstop=4  " most of the time, we want a softtabstop of 4
-set tabstop=4      " display tabs as 4 characters wide
-set shiftwidth=4   " shift by 4 spaces when using >> and <<
+" two-space standard {{{
+" for most code, use 2 space indents. specific filetypes are overridden elsewhere
+set softtabstop=2  " most of the time, we want a softtabstop of 2
+set tabstop=2      " display tabs as 2 characters wide
+set shiftwidth=2   " shift by 2 spaces when using >> and <<
 set expandtab      " no tabs, just spaces
 " }}}
 
@@ -53,7 +53,7 @@ set expandtab      " no tabs, just spaces
 " file, which keeps overrides from being persistent
 augroup reset_indenting
     autocmd!
-    autocmd FileType * set softtabstop=4 tabstop=4 shiftwidth=4 expandtab
+    autocmd FileType * set softtabstop=2 tabstop=2 shiftwidth=2 expandtab
 augroup END
 " }}}
 " }}}

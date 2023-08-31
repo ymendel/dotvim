@@ -30,15 +30,10 @@ augroup filetype_indent_tabs
 augroup END
 " }}}
 
-" indentation level 2 for ruby/js/lua/scala/sql/elixir {{{
-augroup filetype_indent_two
+" indentation level four for ...? {{{
+augroup filetype_indent_four
     autocmd!
-    autocmd FileType ruby,eruby,yaml setlocal softtabstop=2 tabstop=2 shiftwidth=2
-    autocmd FileType javascript,javascriptreact setlocal softtabstop=2 tabstop=2 shiftwidth=2
-    autocmd FileType lua setlocal softtabstop=2 tabstop=2 shiftwidth=2
-    autocmd FileType scala setlocal softtabstop=2 tabstop=2 shiftwidth=2
-    autocmd FileType sql setlocal softtabstop=2 tabstop=2 shiftwidth=2
-    autocmd FileType elixir setlocal softtabstop=2 tabstop=2 shiftwidth=2
+    " autocmd FileType some,list,of,stuff setlocal softtabstop=4 tabstop=4 shiftwidth=4
 augroup END
 " }}}
 
