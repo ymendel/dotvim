@@ -33,7 +33,7 @@ augroup END
 " indentation level four for ...? {{{
 augroup filetype_indent_four
     autocmd!
-    " autocmd FileType some,list,of,stuff setlocal softtabstop=4 tabstop=4 shiftwidth=4
+    autocmd FileType vim setlocal softtabstop=4 tabstop=4 shiftwidth=4
 augroup END
 " }}}
 
