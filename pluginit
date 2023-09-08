@@ -24,6 +24,7 @@ Plug 'w0rp/ale'
 Plug 'zackhsi/sorbet-lsp'
 Plug 'AndrewRadev/splitjoin.vim'
 Plug 'github/copilot.vim'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " }}}
 
 " project specific {{{
