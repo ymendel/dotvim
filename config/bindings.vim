@@ -23,6 +23,8 @@ noremap <leader>sa :%s/\s\+$//g<cr>
 
 " delete blank lines
 noremap <leader>db :g/^\s*$/d<cr>
+" 'normalize' blank lines, as in only one blank line in a group
+noremap <leader>nb :%s/\n\{3,}/\r\r/<cr>
 " }}}
 
 " changing case {{{
