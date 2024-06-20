@@ -11,6 +11,9 @@ Plug 'vitalk/vim-shebang'
 Plug 'tpope/vim-markdown'
 Plug 'digitalrounin/vim-yaml-folds'
 Plug 'elixir-editors/vim-elixir'
+Plug 'pangloss/vim-javascript'
+Plug 'leafgarland/typescript-vim'
+Plug 'maxmellon/vim-jsx-pretty'
 " }}}
 
 " editing {{{
