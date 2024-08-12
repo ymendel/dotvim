@@ -2,7 +2,7 @@ default: install
 
 install: links plugs
 
-links: link_vimdir link_vimrc
+links: link_vimdir link_vimrc link_nvimdir
 
 link_vimdir: ~/.vim
 link_vimrc: ~/.vimrc
@@ -12,6 +12,10 @@ link_vimrc: ~/.vimrc
 
 ~/.vimrc:
 	ln -s ~/.vim/vimrc ~/.vimrc
+
+link_nvimdir:
+	mkdir -p ~/.config
+	ln -s ${PWD} ~/.config/nvim
 
 plugs:
 	vim +PlugInstall +qall
