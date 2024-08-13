@@ -27,12 +27,20 @@ set formatoptions+=j  " remove comment leader when joining lines
 " set smartindent " automatically indent new lines
 " }}}
 
+" don't do this for nvim. nvim doesn't like it
+if !has("nvim")
 " Re-indent when pasting
 nnoremap p p=`]<C-o>
 nnoremap P P=`]<C-o>
 " but also allow "unchanged paste"
 nnoremap up p
 nnoremap UP P
+endif
+
+if has("nvim")
+  " I like 'classic Y', not y$
+  unmap Y
+endif
 
 " handle splitting/joining with splitjoin
 let g:splitjoin_split_mapping = ''

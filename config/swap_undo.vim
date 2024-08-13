@@ -1,9 +1,18 @@
-set directory=~/.vim/swapfiles,/var/tmp,/tmp,.
+if has("nvim")
+    set directory=~/.vim/swapfiles/nvim,/var/tmp,/tmp,.
+else
+    set directory=~/.vim/swapfiles,/var/tmp,/tmp,.
+endif
+
 
 " enable persistent undo
 if has("persistent_undo")
     set undofile
-    set undodir=~/.vim/undofiles,/var/tmp,/tmp,.
+    if has("nvim")
+        set undodir=~/.vim/undofiles/nvim,/var/tmp,/tmp,.
+    else
+        set undodir=~/.vim/undofiles,/var/tmp,/tmp,.
+    endif
 endif
 
 " handle one file open in two sessions {{{

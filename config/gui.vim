@@ -7,6 +7,12 @@ if has("gui_macvim")
     set macligatures
 endif
 
+if exists("g:neovide")
+    " I _cannot_ deal with the animation
+    " but set this to a low integer if you want a fun time
+    let g:neovide_cursor_animation_length = 0
+endif
+
 set mouse=a  " use mouse when possible
 let &guifont=g:guifontname . ":h" . g:guifontsize
 

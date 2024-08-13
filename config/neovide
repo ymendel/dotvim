@@ -1,0 +1,28 @@
+" from https://neovide.dev/faq.html, but translated into vimscript
+" because `if vim.g.neovide then` gave me trouble
+if exists("g:neovide")
+
+" saving {{{
+nnoremap <D-s> :w<CR>
+inoremap <D-s> <ESC>:w<CR>li
+" }}}
+
+" copy/paste {{{
+vnoremap <D-c> "+y
+nnoremap <D-v> "+P
+vnoremap <D-v> "+P
+cnoremap <D-v> <C-R>+
+inoremap <D-v> <ESC>l"+Pli
+" }}}
+
+" tabs {{{
+nnoremap <D-t> :tabnew<CR>
+inoremap <D-t> <ESC>:tabnew<CR>
+" }}}
+
+" closing {{{
+nnoremap <D-w> :close<CR>
+inoremap <D-w> <ESC>:close<CR>
+" }}}
+
+endif
