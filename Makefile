@@ -13,7 +13,9 @@ link_vimrc: ~/.vimrc
 ~/.vimrc:
 	ln -s ~/.vim/vimrc ~/.vimrc
 
-link_nvimdir:
+link_nvimdir: ~/.config/nvim
+
+~/.config/nvim:
 	mkdir -p ~/.config
 	ln -s ${PWD} ~/.config/nvim
 
