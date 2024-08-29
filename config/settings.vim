@@ -1,6 +1,7 @@
 set nocompatible  " to hell with vi compatibility!
 set wildmenu      " fancy command completion menu!
-set modelines=1   " enable modelines
+set modeline      " enable modelines
+set modelines=1   " just one modeline
 
 set noerrorbells visualbell
 
