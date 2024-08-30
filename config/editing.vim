@@ -29,12 +29,12 @@ set formatoptions+=j  " remove comment leader when joining lines
 
 " don't do this for nvim. nvim doesn't like it
 if !has("nvim")
-" Re-indent when pasting
-nnoremap p p=`]<C-o>
-nnoremap P P=`]<C-o>
-" but also allow "unchanged paste"
-nnoremap up p
-nnoremap UP P
+    " Re-indent when pasting
+    nnoremap p p=`]<C-o>
+    nnoremap P P=`]<C-o>
+    " but also allow "unchanged paste"
+    nnoremap up p
+    nnoremap UP P
 endif
 
 if has("nvim")

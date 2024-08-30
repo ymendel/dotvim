@@ -1,5 +1,10 @@
 " from https://neovide.dev/faq.html, but translated into vimscript
 " because `if vim.g.neovide then` gave me trouble
+
+" for reference:
+" D = command
+" M = option
+" C = control
 if exists("g:neovide")
 
 " saving {{{
@@ -18,11 +23,16 @@ inoremap <D-v> <ESC>l"+Pli
 " tabs {{{
 nnoremap <D-t> :tabnew<CR>
 inoremap <D-t> <ESC>:tabnew<CR>
+
+nnoremap <M-D-Right> :tabnext<CR>
+inoremap <M-D-Right> <ESC>:tabnext<CR>
+nnoremap <M-D-Left>  :tabprevious<CR>
+inoremap <M-D-Left>  <ESC>:tabprevious<CR>
 " }}}
 
 " closing {{{
-nnoremap <D-w> :close<CR>
-inoremap <D-w> <ESC>:close<CR>
+nnoremap <D-w> :quit<CR>
+inoremap <D-w> <ESC>:quit<CR>
 " }}}
 
 endif
