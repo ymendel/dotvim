@@ -20,5 +20,4 @@ set splitbelow
 set splitright
 
 " but make help appear where I want
-cnoremap h top help
 cnoremap help top help
