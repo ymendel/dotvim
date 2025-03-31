@@ -29,7 +29,7 @@ set lines=48
 "   A: modeless selections go to the clipboard
 "   c: don't pop up windows; use the console for dialog boxes and such
 "   e: use GUI tab bar instead of text tab bar
-set guioptions=aAce
+" set guioptions=aAce
 " }}}
 
 endif
