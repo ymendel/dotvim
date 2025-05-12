@@ -24,9 +24,9 @@ Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-speeddating'
 Plug 'w0rp/ale'
-Plug 'zackhsi/sorbet-lsp'
+" Plug 'zackhsi/sorbet-lsp'
 Plug 'AndrewRadev/splitjoin.vim'
-Plug 'github/copilot.vim'
+" Plug 'github/copilot.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " }}}
 
