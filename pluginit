@@ -1,9 +1,10 @@
 call plug#begin('~/.vim/plugged')
 
-" file navigation {{{
+" file navigation and related {{{
 Plug 'scrooloose/nerdtree'
 Plug '$HOMEBREW_PREFIX/opt/fzf'
 Plug 'junegunn/fzf.vim'
+Plug 'tpope/vim-eunuch'
 " }}}
 
 " file(type) specific {{{
