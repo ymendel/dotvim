@@ -34,6 +34,7 @@ augroup END
 augroup filetype_indent_four
     autocmd!
     autocmd FileType vim setlocal softtabstop=4 tabstop=4 shiftwidth=4
+    autocmd FileType bash,sh setlocal softtabstop=4 tabstop=4 shiftwidth=4
 augroup END
 " }}}
 
