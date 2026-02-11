@@ -15,6 +15,7 @@ Plug 'elixir-editors/vim-elixir'
 Plug 'pangloss/vim-javascript'
 Plug 'leafgarland/typescript-vim'
 Plug 'maxmellon/vim-jsx-pretty'
+Plug 'mustache/vim-mustache-handlebars'
 " }}}
 
 " editing {{{
