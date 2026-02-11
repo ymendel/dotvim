@@ -1,3 +1,7 @@
+" this is maybe a short-term thing
+" possibly I should just remove .editorconfig from the offending repo instead
+let g:editorconfig = v:false
+
 " line numbers and other current-line settings {{{
 set number  " show line numbers
 nnoremap <silent> <c-n> :set relativenumber!<cr>
