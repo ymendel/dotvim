@@ -8,7 +8,7 @@ link_vimdir: ~/.vim
 link_vimrc: ~/.vimrc
 
 ~/.vim:
-	ln -s ${PWD} ~/.vim
+	ln -s $(CURDIR) ~/.vim
 
 ~/.vimrc:
 	ln -s ~/.vim/vimrc ~/.vimrc
@@ -17,7 +17,7 @@ link_nvimdir: ~/.config/nvim
 
 ~/.config/nvim:
 	mkdir -p ~/.config
-	ln -s ${PWD} ~/.config/nvim
+	ln -s $(CURDIR) ~/.config/nvim
 
 plugs:
 	vim +PlugInstall +qall
